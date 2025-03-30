@@ -5,16 +5,17 @@ import { Nav, NavItem, NavLink } from 'reactstrap'
 
 import useCurrentPath from '../utils/useCurrentPath'
 import { routes } from '../utils/constants'
+import logo from "../assets/React-icon.svg"
 
 const Sidebar = ({ isOpen, toggle }) => {
   const currentPath = useCurrentPath()
 
   return <aside className={classNames("sidebar", { "is-open": isOpen })}>
-    <div className="sidebar-header">
-      <span color="info" onClick={toggle} style={{ color: "#fff" }}>
-        &times;
-      </span>
-      <h3>Admin</h3>
+    <div className="sidebar-header d-flex text-center" style={{ marginRight: "8px", marginLeft: "16px" }}>
+      <div style={{ width: "2.5rem" }}>
+        <img src={logo} style={{ objectFit: "contain", width: "100%", height: "100%" }} alt="Logo" />
+      </div>
+      <h3 className="mb-0" style={{ paddingLeft: '8px' }}>App</h3>
     </div>
     <div className="side-menu">
       <Nav vertical className="list-unstyled pb-3">

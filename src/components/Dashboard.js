@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Card, CardBody, CardSubtitle, CardText, CardTitle, Col, Container, Progress, Row } from 'reactstrap';
+import { Card, CardBody, CardSubtitle, CardTitle, Col, Container, Progress, Row } from 'reactstrap';
 import {
-  Chart as ChartJS, Title, Tooltip, Legend, //Common
-  CategoryScale, LinearScale, //Line & Bar Chart
-  BarElement,//Bar Chart
-  PointElement, LineElement, Filler, //Line Chart & Area Chart
-  ArcElement, //Pie Chart
+  Chart as ChartJS, Title, Tooltip, Legend,
+  CategoryScale, LinearScale,
+  BarElement,
+  PointElement, LineElement, Filler,
+  ArcElement,
 } from "chart.js";
 
 import { ProductContext } from '../context';
@@ -43,7 +43,7 @@ const Dashboard = (props) => {
       setOrders(products.length);
       setLoader(false);
     }
-  }, [filteredProducts]);
+  }, [products, filteredProducts]);
 
   const cards = [{
     title: "Total Profit",
@@ -113,6 +113,7 @@ const Dashboard = (props) => {
       <Col>
         <Card>
           <CardBody>
+            <CardTitle>{"Product Pricing"}</CardTitle>
             {!loader && <DiscountChart chartsData={products || []} />}
           </CardBody>
         </Card>
