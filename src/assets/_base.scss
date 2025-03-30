@@ -25,26 +25,19 @@ a:focus {
 .sidebar {
   min-width: 250px;
   max-width: 250px;
-  background: #272c33;
-  color: #f8f9fa;
-  /* margin-left: -250px; */
+  background: #7386d5;
+  color: #fff;
+  margin-left: -250px;
   transition: all 0.5s;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  z-index: 5;
-  /* position: fixed; */
-  /* left: 1110px; */
-  /* top: 30px; */
 }
 
 .sidebar.is-open {
-  /* margin-left: 0; */
+  margin-left: 0;
   transition: 0.5s;
 }
 
 .sidebar-header {
-  background: #272c33;
+  background: #6d7fcc;
 }
 
 .sidebar-header h3 {
@@ -52,34 +45,23 @@ a:focus {
   padding: 1em;
 }
 
-.sidebar ul a {
-  color: #f8f9fa;
+.sidebar ul p {
+  color: #fff;
   padding: 10px;
-  margin-bottom: 0px;
 }
 
 .menu-open {
-  background: #272c33;
-}
-
-.nav-link.is-active {
-  color: #fff !important;
-  /* background: rgba(248,249,250,.15); */
-}
-
-.nav-link.is-active:hover {
-  /* background: hsla(0,0%,100%,.23);
-  opacity: 1 */
-  color: #fff !important;
+  background: #6d7fcc;
 }
 
 .nav-item:hover {
-  /* background: rgba(248,249,250,.15); */
-  color: #fff !important;
+  color: #7386d5;
+  background: #fff;
 }
 
 .items-menu {
-  /* background: rgba(248,249,250,.15); */
+  color: #fff;
+  background: #6d7fcc;
 }
 
 li a.dropdown-toggle::after {
@@ -89,7 +71,7 @@ li a.dropdown-toggle::after {
   top: 10%;
 }
 
-.sidebar-header > span {
+.sidebar-header>span {
   position: relative;
   float: right;
   margin: 0.5em;
@@ -99,7 +81,6 @@ li a.dropdown-toggle::after {
 }
 
 .side-menu {
-  margin: 8px;
   height: calc(100vh - 130px);
   overflow-y: scroll;
 }
@@ -109,12 +90,12 @@ li a.dropdown-toggle::after {
 }
 
 .side-menu::-webkit-scrollbar-thumb {
-  background: #272c33;
+  background: #5466b3;
   border-radius: 3px;
 }
 
 .side-menu::-webkit-scrollbar-thumb:hover {
-  background: #272c33;
+  background: #3a4c99;
 }
 
 /* ---------------------------------------------------
@@ -122,8 +103,7 @@ li a.dropdown-toggle::after {
 ----------------------------------------------------- */
 .content {
   padding: 20px;
-  margin-top: 4.25rem;
-  margin-left: 250px;
+  margin-left: 0;
   height: 100vh;
 }
 
@@ -143,7 +123,7 @@ li a.dropdown-toggle::after {
     transition: all 0.5s, height 0s;
   }
 
-  .sidebar.is-open > .sidebar-header span {
+  .sidebar.is-open>.sidebar-header span {
     display: unset;
   }
 
